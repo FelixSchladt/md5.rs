@@ -1,7 +1,7 @@
 use std::env;
 use std::fs;
 
-// This has been written as an exercise, for questions please refer to the spec
+// This has been written as an exercise, for the original specification please refer to:
 // https://datatracker.ietf.org/doc/html/rfc1321
 
 
