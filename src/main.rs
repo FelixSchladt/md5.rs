@@ -4,7 +4,7 @@ use std::fs;
 // This has been written as an exercise, for the original specification please refer to:
 // https://datatracker.ietf.org/doc/html/rfc1321
 
-
+//output array of u8 as one u32
 fn as_u32_le(array: &[u8]) -> u32 {
     ((array[0] as u32) << 0)
         + ((array[1] as u32) << 8)
@@ -68,7 +68,8 @@ fn md5(inital_msg: &str, initial_len: usize) {
             //represent each block as 16 u32
             chunk[i] = as_u32_le(&msg[(offset + i * 4)..((offset + i * 4) + 4)]);
         }
-
+        
+        //init start values
         let mut a: u32 = h0;
         let mut b: u32 = h1;
         let mut c: u32 = h2;
