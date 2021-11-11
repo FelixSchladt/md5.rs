@@ -96,6 +96,7 @@ fn md5(inital_msg: &str, initial_len: usize) {
             let temp: u32 = d;
             d = c;
             c = b;
+            //add a + f + k[i] + chunk[g] with overflow and shift r[i] positions left
             b = b.wrapping_add(
                 a.wrapping_add(f.wrapping_add(k[i].wrapping_add(chunk[g])))
                     .rotate_left(r[i]),
