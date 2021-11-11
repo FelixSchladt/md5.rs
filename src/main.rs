@@ -92,7 +92,7 @@ fn md5(inital_msg: &str, initial_len: usize) {
                 g = (7 * i) % 16;
             }
 
-            //Iterate through variables
+            //Shift contents of variables
             let temp: u32 = d;
             d = c;
             c = b;
